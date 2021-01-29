@@ -1,0 +1,33 @@
+.row {
+	@include clearfix;
+
+	& > div {
+		float: left;
+	}
+
+	&--gutters {
+		margin-right: -$width-gutter;
+
+		& > div {
+			padding-right: $width-gutter;
+		}
+	}
+
+	@include atMedium {
+		&__md-4 {
+			width: 33.33%;
+
+			&--small {
+				width: 37%;
+			}
+		}
+
+		&__md-8 {
+			width: 66.66%;
+
+			&--large {
+				width: 62%;
+			}
+		}
+	}
+}

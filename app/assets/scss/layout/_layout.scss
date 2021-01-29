@@ -1,0 +1,49 @@
+.wrapper {
+	padding-left: 18px;
+	padding-right: 18px;
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--medium {
+		max-width: 967px;
+	}
+
+	&--b-margin {
+		margin-bottom: 1rem;
+		@include atSmall {
+			margin-bottom: 3.875rem;
+		}
+	}
+}
+
+.page-section {
+	padding: 1.2rem 0;
+
+	@include atMedium {
+		padding: 4.5rem 0
+	}
+
+	&--blue {
+		@include set-background($color-blue)
+	}
+}
+
+.generic-content-container {
+	p {
+		line-height: 1.65;
+		@include atMedium {
+			font-size: 1.125rem;
+		}
+	}
+
+	p a {
+        font-weight: 400;
+	}
+}
