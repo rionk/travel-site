@@ -1,33 +1,54 @@
 .row {
 	@include clearfix;
 
-	& > div {
+	[class^="row__"] {
 		float: left;
-	}
 
-	&--gutters {
-		margin-right: -$width-gutter;
-
-		& > div {
-			padding-right: $width-gutter;
+		&:last-of-type {
+			margin-right:0;
 		}
 	}
 
 	@include atMedium {
-		&__md-4 {
-			width: 33.33%;
-
-			&--small {
-				width: 37%;
+		&--gutters {
+			& > div {
+				margin-right: $width-gutter;
+			}
+		}
+		&--gutters-large {
+			& > div {
+				margin-right: $width-gutter-large;
 			}
 		}
 
+		&__md-4 {
+			width: calc(100% / 3);
+		}
 		&__md-8 {
-			width: 66.66%;
+			width: calc(100% / 3 * 2);
+		}
 
-			&--large {
-				width: 62%;
+		&--gutters &__md-4 {
+			width: calc((100% - #{$width-gutter * 2}) / 3);
+			&--small {
+				width: calc(37% - #{$width-gutter});
 			}
+		}
+		&--gutters &__md-8 {
+			width: calc(((100% - #{$width-gutter * 2}) / 3)  * 2);
+			&--large {
+				width: 62%
+			}
+		}
+
+		&__md-6 {
+			width: calc(100% / 2);
+		}
+		&--gutters &__md-6 {
+			width: calc((100% - #{$width-gutter}) / 2);
+		}
+		&--gutters-large &__md-6 {
+			width: calc((100% - #{$width-gutter-large}) / 2);
 		}
 	}
 }
