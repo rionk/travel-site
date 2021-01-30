@@ -1,20 +1,25 @@
-.b-margin-small {
+.mb-small {
   margin-bottom: .5em;
 }
 
-.b-margin-medium {
+.mb-medium {
   margin-bottom: 1rem;
 }
-.b-margin-large {
+
+.mb-large {
   margin-bottom: 1.6em;
 }
 
-.t-margin-none {
-  margin-top: 0
+.mt-none {
+  margin-top: 0;
 }
 
-.b-margin-md-none {
+.mb-md-none {
   @include atMedium {
-    margin-bottom: 0
+    margin-bottom: 0;
   }
+}
+
+.pt-80 {
+  padding-top: 80px
 }

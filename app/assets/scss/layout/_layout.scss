@@ -15,10 +15,21 @@
 		max-width: 967px;
 	}
 
-	&--b-margin {
+	&--mb {
 		margin-bottom: 1rem;
+
 		@include atSmall {
 			margin-bottom: 3.875rem;
+		}
+	}
+
+	&--p-u-md-none {
+		padding-left: 0;
+		padding-right: 0;
+
+		@include atMedium {
+			padding-left: 18px;
+			padding-right: 18px;
 		}
 	}
 }
@@ -32,6 +43,22 @@
 
 	&--blue {
 		@include set-background($color-blue)
+	}
+
+	&--testimonials {
+		background: #e0e6ef;
+
+		@include atSmall {
+			background: url("../images/testimonials-bg.jpg") top center no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&--p-u-md-none {
+		padding-bottom: 0;
+		@include atMedium {
+			padding-bottom: 4.5rem;
+		}
 	}
 }
 

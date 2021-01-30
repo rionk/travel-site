@@ -1,0 +1,39 @@
+.testimonial {
+  background: rgba(255,255,255, .8);
+  padding: 0 1.812rem 1px;
+  margin-bottom: 98px;
+
+  @include atMedium {
+    margin-bottom: 0;
+  }
+
+  &__photo {
+    position: relative;
+    top: -80px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    margin:0 auto -80px;
+    border: 6px solid  rgba(255,255,255, .8);
+  }
+
+  &__title {
+    color: $color-blue;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin:0
+  }
+
+  &__subtitle {
+    color: $color-orange;
+    text-align: center;
+    font-weight: 400;
+    margin: .25rem 0 1rem
+  }
+
+  &--last {
+    margin: 0
+  }
+}

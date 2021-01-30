@@ -1,8 +1,11 @@
 .row {
 	@include clearfix;
+	display: flex;
+	flex-wrap: wrap;
 
 	[class^="row__"] {
-		float: left;
+		//float: left;
+		display: flex;
 
 		&:last-of-type {
 			margin-right:0;
@@ -15,6 +18,13 @@
 				margin-right: $width-gutter;
 			}
 		}
+
+		&--gutters-small {
+			& > div {
+				margin-right: $width-gutter-small;
+			}
+		}
+
 		&--gutters-large {
 			& > div {
 				margin-right: $width-gutter-large;
@@ -24,15 +34,18 @@
 		&__md-4 {
 			width: calc(100% / 3);
 		}
-		&__md-8 {
-			width: calc(100% / 3 * 2);
+		&--gutters-small &__md-4 {
+			width: calc((100% - #{$width-gutter-small * 2}) / 3);
 		}
-
 		&--gutters &__md-4 {
 			width: calc((100% - #{$width-gutter * 2}) / 3);
 			&--small {
 				width: calc(37% - #{$width-gutter});
 			}
+		}
+
+		&__md-8 {
+			width: calc(100% / 3 * 2);
 		}
 		&--gutters &__md-8 {
 			width: calc(((100% - #{$width-gutter * 2}) / 3)  * 2);
