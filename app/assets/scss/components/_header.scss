@@ -1,0 +1,121 @@
+.site-header {
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	transition: background-color .3s ease-out;
+
+	&--expanded {
+		background: rgba($color-blue, 0.55);
+		z-index: 3;
+	}
+
+	@include atMedium {
+		background: rgba($color-blue, 0.55);
+		padding: 10px 0;
+	}
+
+	&__btn-container {
+		text-align: center;
+
+		@include atMedium {
+			float: right;
+		}
+	}
+
+	&__logo {
+		position: absolute;
+		top:0;
+		left: 50%;
+		transform: translateX(-50%);
+		background: $color-blue;
+		padding: 13px 29px;
+		z-index: 2;
+
+		@include atMedium {
+			left: 0;
+			transform: translateX(0) translateY(1px);
+			padding: 25px 36px;
+		}
+	}
+
+	&__menu-icon {
+		position: absolute;
+		width: 20px;
+		height: 19px;
+		top : 15px;
+		right: 15px;
+		cursor: pointer;
+
+		@include atMedium {
+			display: none;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 3px;
+			background: #fff;
+			transition: all .3s;
+			transform-origin: 0 0;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 16px;
+			width: 100%;
+			height: 3px;
+			background: #fff;
+			transition: all .3s;
+			transform-origin: 0 100% ;
+		}
+		&__bar {
+			position: absolute;
+			top: 8px;
+			width: 100%;
+			height: 3px;
+			background: #fff;
+			transition: all .3s;
+		}
+
+		&--close {
+			&::before {
+				transform: rotate(45deg) scale(1.25) translateY(-1px);
+			}
+			&::after {
+				transform: rotate(-45deg) scale(1.25);;
+			}
+			.site-header__menu-icon__bar {
+				opacity: 0;
+			}
+		}
+	}
+
+
+	&__menu-content {
+		position: relative;
+		opacity: 0;
+		transform: scale(1.2);
+		transition: all .3s ease-out;
+		z-index: -10;
+		margin-top: 100px;
+
+		@include clearfix;
+
+		@include atMedium {
+			margin-top: 0;
+			opacity: 1;
+			z-index: 1;
+			transform: scale(1);
+			transition: none;
+		}
+
+		&--visible {
+			//display: block;
+			opacity: 1;
+			z-index: 1;
+			transform: scale(1);
+		}
+	}
+}
