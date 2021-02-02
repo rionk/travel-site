@@ -1,17 +1,23 @@
 .site-header {
 	position: absolute;
 	width: 100%;
-	z-index: 2;
-	transition: background-color .3s ease-out;
+	z-index: 3;
+	transition: all .3s ease-out;
 
 	&--expanded {
 		background: rgba($color-blue, 0.55);
-		z-index: 3;
+		
 	}
 
 	@include atMedium {
+		position: fixed;
 		background: rgba($color-blue, 0.55);
 		padding: 10px 0;
+
+		&--dark {
+			padding: 5px 0;
+			background: rgba(23,51,72, .85);
+		}
 	}
 
 	&__btn-container {
@@ -26,15 +32,21 @@
 		position: absolute;
 		top:0;
 		left: 50%;
-		transform: translateX(-50%);
+		transition: transform .3s ease-out;
+		transform: translateX(-50%) scale(.8);
+		transform-origin: 50% 0;
 		background: $color-blue;
-		padding: 13px 29px;
-		z-index: 2;
+		padding: 25px 36px;
+
 
 		@include atMedium {
-			left: 0;
-			transform: translateX(0) translateY(1px);
-			padding: 25px 36px;
+			left: auto;
+			transform: translateX(0);
+			padding: 13px 29px;
+
+			.site-header--dark & {
+				transform: scale(.56);
+			}
 		}
 	}
 
@@ -102,7 +114,7 @@
 		margin-top: 100px;
 
 		@include clearfix;
-
+		
 		@include atMedium {
 			margin-top: 0;
 			opacity: 1;

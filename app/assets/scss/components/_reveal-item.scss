@@ -1,9 +1,11 @@
 .reveal-item {
 	opacity: 0;
-	transition: opacity .3s ease-in;
+	transform: scale(1.2);
+	//transition: opacity .1s ease-in,  transform .1s ease-in;
 
 	&--visible {
 		opacity: 1;
-		transition: opacity 1.5s ease-out ;
+		transform: scale(1);
+		transition: opacity 1.5s ease-out , transform .5s ease-out;
 	}
 }

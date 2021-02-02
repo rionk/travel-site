@@ -38,7 +38,11 @@
 		@include atMedium {
 			font-size: 1rem;
 			padding: 12px;
-			background:transparent;
+			background:transparent; 
+
+			&.current {
+				color: #fabb69
+			}
 		}
 	}
 }
