@@ -1,4 +1,5 @@
 import "../scss/main.scss";
+import 'lazysizes';
 import MobileMenu from "./modules/MobileMenu.js";
 import RevealOnScroll from "./modules/RevealOnScroll.js";
 import StickyHeader from "./modules/StickyHeader.js";
@@ -35,7 +36,6 @@ document.querySelectorAll(".open-modal").forEach(button => {
         }
     });
 })
-
 
 
 if(import.meta.webpackHot) {
