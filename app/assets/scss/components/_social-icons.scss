@@ -1,0 +1,26 @@
+.social-icons {
+    text-align: center;
+
+    &__icon {
+        background: $color-orange;
+        width: 33%;
+        height: 72px;
+        display: inline-block;
+        margin: 0 5px 5px 5px;
+        position: relative;
+
+        @include atSmall {
+            width: 72px;
+            height: 72px;
+        }
+
+        img {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+
+        }
+    }
+}

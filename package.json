@@ -7,7 +7,7 @@
   "license": "ISC",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve"
+    "dev": "webpack serve --open"
   },
   "dependencies": {
     "jquery": "^3.5.1",
