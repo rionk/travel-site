@@ -1,0 +1,66 @@
+.headline {
+    font-weight: 300;
+    font-size: 1.9rem;
+    color: $color-blue;
+
+    @include response(small-screens) {
+        font-size: 2.865rem;
+    }
+
+    &--centered {
+        text-align: center;
+    }
+
+    &--orange {
+        color: $color-orange;
+    }
+
+    &--small {
+        font-size: 1.2rem;
+
+        @include response(small-screens) {
+            font-size: 1.875rem;
+        }
+    }
+
+    &--narrow {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--light {
+        font-weight: 100;
+    }
+
+    &--mb-small {
+        margin-bottom: 0.5rem;
+    }
+
+    &--mb-large {
+        margin-bottom: 1.6rem;
+    }
+
+    &--no-mt {
+        margin-top: 0;
+    }
+}
+
+.text-container {
+    p {
+        line-height: 1.65;
+        margin-bottom: 1.9rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include response(small-screens) {
+            font-size: 1.125rem;
+        }
+    }
+
+    p a {
+        font-weight: 700;
+    }
+}

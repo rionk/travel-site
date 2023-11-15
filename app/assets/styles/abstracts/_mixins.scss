@@ -1,0 +1,27 @@
+@mixin response ($width) {
+    @if $width ==small-screens {
+        @media (min-width: $width-small) {
+            @content;
+        }
+    }
+
+    @else if $width ==medium-screens {
+        @media (min-width: $width-medium) {
+            @content;
+        }
+    }
+
+    @if $width ==large-screens {
+        @media (min-width: $width-large) {
+            @content;
+        }
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}

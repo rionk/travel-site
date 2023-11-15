@@ -1,0 +1,12 @@
+.page-section {
+    padding: 2rem 0;
+
+    &--blue {
+        background-color: $color-blue;
+        color: #fff
+    }
+
+    @include response(medium-screens) {
+        padding: 4.5rem 0;
+    }
+}

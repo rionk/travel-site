@@ -1,0 +1,23 @@
+.wrapper {
+    max-width: 1200px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &--narrow {
+        max-width: 976px;
+    }
+
+    &--mb-until-medium {
+        @include response(medium-screens) {
+            margin-bottom: 3.875rem;
+        }
+    }
+}
