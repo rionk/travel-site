@@ -1,14 +1,29 @@
-.generic-content-container {
-	p {
-		line-height: 1.65;
-		margin: 1.8rem 0;
+.section-title {
+	font-size: 2.55rem;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 4rem;
 
-		@include small-screens {
-			font-size: 1.125rem;
-		}
+	@include small-screens {
+		font-size: 3.75rem;
 	}
 
-	p a {
-		font-weight: 700;
+	strong {
+		font-weight: 500;
+	}
+
+	&__icon {
+		display: block;
+		position: relative;
+		top: -10px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include small-screens {
+			position: relative;
+			top: 5px;
+			display: inline-block;
+			margin-right: .5rem;
+		}
 	}
 }

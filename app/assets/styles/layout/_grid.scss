@@ -4,10 +4,15 @@
 
 	&--gutters {
 		column-gap: $gutter-width;
+		row-gap: $gutter-width;
 	}
 
-	& > div {
-		width: 100%;
+	&--gutters-large {
+		column-gap: $gutter-width;
+
+		@include medium-screens {
+			column-gap: $large-gutter-width;
+		}
 	}
 
 	&__4 {
@@ -20,6 +25,13 @@
 
 	&--gutters &__4 {
 		width: calc((100% - $gutter-width * 2) / 3)
+	}
+
+	&--gutters &__6 {
+		width: calc((100% - $gutter-width * 1) / 2)
+	}
+	&--gutters-large &__6 {
+		width: calc((100% - $large-gutter-width * 1) / 2)
 	}
 
 	&--gutters &__8 {
@@ -39,12 +51,23 @@
 			width: calc(100%  / 3)
 		}
 
+		&__md-6 {
+			width: calc(100%  / 2)
+		}
+
 		&__md-8 {
 			width: calc(100% / 3 * 2)
 		}
 
 		&--gutters &__md-4 {
 			width: calc((100% - $gutter-width * 2) / 3)
+		}
+
+		&--gutters &__md-6 {
+			width: calc((100% - $gutter-width * 1) / 2)
+		}
+		&--gutters-large &__md-6 {
+			width: calc((100% - $large-gutter-width * 1) / 2)
 		}
 
 		&--gutters &__md-8 {
