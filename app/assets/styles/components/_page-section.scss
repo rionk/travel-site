@@ -1,5 +1,5 @@
 .page-section {
-	padding: 2.2rem 0;
+	padding: 2.2rem 0 4.5rem;
 
 	@include medium-screens {
 		padding: 4.5rem 0;
@@ -8,6 +8,17 @@
 	&--blue {
 		background-color: $color-blue;
 		color: #fff;
+	}
+
+	&--testimonials {
+		background-color: #e0e6ef;
+
+		@include medium-screens {
+			background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
+			//background: url("assets/images/testimonials-bg.jpg") top center no-repeat;
+			background-size: cover;
+		}
+
 	}
 
 	&__title {
