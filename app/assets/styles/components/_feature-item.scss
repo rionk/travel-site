@@ -1,0 +1,31 @@
+.feature-item {
+	position: relative;
+	padding-bottom: 3rem;
+
+	@include small-screens {
+		padding-left: 94px;
+	}
+
+	&__icon {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include small-screens {
+			position: absolute;
+			left:0;
+		}
+	}
+
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 300;
+		margin-bottom: .8rem;
+		text-align: center;
+
+		@include small-screens {
+			font-size: 1.875rem;
+			text-align: left;
+		}
+	}
+}
