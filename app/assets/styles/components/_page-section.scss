@@ -1,0 +1,62 @@
+.page-section {
+	padding: 2.2rem 0;
+
+	@include medium-screens {
+		padding: 4.5rem 0;
+	}
+
+	&--blue {
+		background-color: $color-blue;
+		color: #fff;
+	}
+
+	&__title {
+		font-size: 1.9rem;
+		font-weight: 300;
+
+		@include small-screens {
+			font-size: 2.875rem;
+		}
+
+		strong {
+			font-weight: 400;
+		}
+
+		&--centered {
+			text-align: center;
+		}
+
+		&--orange {
+			color: $color-orange
+		}
+
+		&--small {
+			font-size: 1.2rem;
+			@include small-screens {
+				font-size: 1.875rem;
+			}
+		}
+
+		&--narrow {
+			max-width: 500px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&--light {
+			font-weight: 100;
+		}
+
+		&--no-margin-top {
+			margin-top: 0;
+		}
+
+		&--margin-bottom-sm {
+			margin-bottom: .5em;
+		}
+
+		&--margin-bottom-lg {
+			margin-bottom: 1.6em;
+		}
+	}
+}
