@@ -1,0 +1,30 @@
+.site-footer {
+	background-color: $color-blue;
+	color: #fff;
+	padding: .5rem 0;
+	//text-align: center;
+
+	&__content {
+		display: flex;
+		row-gap: 1rem;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		@include medium-screens {
+			flex-direction: row;
+			column-gap: 1.4rem;
+		}
+	}
+
+	&__text {
+		font-weight: 200;
+		//display: block;
+		//margin-bottom: 1rem;
+
+		@include medium-screens {
+			//display: inline-block;
+			//margin-right: 1.4rem;
+		}
+	}
+}
