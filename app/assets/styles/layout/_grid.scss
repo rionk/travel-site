@@ -15,23 +15,34 @@
 		margin-top: 128px
 	}
 
+	// gutter
 	&--gutters {
 		gap: $gutter-width;
+		//column-gap: $gutter-width;
+		//row-gap: $gutter-width;
 	}
 
-	&--gutters-small {
+	&--gutters-horizontal-small {
 		column-gap: $gutter-width-small;
-		row-gap: $gutter-width;
 	}
 
-	&--gutters-large {
-		gap: $gutter-width;
+	&--gutters-horizontal-large {
+		column-gap: $gutter-width;
+
+		@include medium-screens {
+			column-gap: $gutter-width-large;
+		}
+	}
+
+	&--gutters-vertical-large {
+		row-gap : $gutter-width;
 
 		@include medium-screens {
 			row-gap: $gutter-width-large;
 		}
 	}
 
+	// element
 	&__margin-bottom-until-medium {
 		margin-bottom: 1rem;
 
@@ -67,16 +78,20 @@
 		}
 
 		// gutter-small
-		&--gutters-small &__md-4 {
+		&--gutters-horizontal-small &__md-4 {
 			width: calc((100% - $gutter-width-small * 2) / 3)
 		}
 
-		&--gutters-small &__md-6 {
+		&--gutters-horizontal-small &__md-6 {
 			width: calc((100% - $gutter-width-small * 1) / 2)
 		}
 
 		// gutter-large
-		&--gutters-large &__md-6 {
+		&--gutters-horizontal-small &__md-4 {
+			width: calc((100% - $gutter-width-large * 2) / 3)
+		}
+
+		&--gutters-horizontal-large &__md-6 {
 			width: calc((100% - $gutter-width-large * 1) / 2)
 		}
 	}
@@ -86,8 +101,12 @@
 			width: calc((100% - $gutter-width * 2) / 3)
 		}
 
-		&--gutters-small &__lg-4 {
+		&--gutters-horizontal-small &__lg-4 {
 			width: calc((100% - $gutter-width-small * 2) / 3)
+		}
+
+		&--gutters-horizontal-large &__lg-4 {
+			width: calc((100% - $gutter-width-large * 2) / 3)
 		}
 	}
 }

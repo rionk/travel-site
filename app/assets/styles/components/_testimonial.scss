@@ -1,7 +1,7 @@
 .testimonial {
 	background-color: rgba(255,255,255, .8);
 	padding: 0 18px 25px 18px;
-	margin-bottom: 30px;
+	//margin-bottom: 30px;
 
 	@include large-screens {
 		margin-bottom: 0;
@@ -9,7 +9,7 @@
 	}
 
 	&--last {
-		margin-bottom: 0;
+		//margin-bottom: 0;
 	}
 
 	&__photo {
