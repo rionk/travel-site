@@ -7,6 +7,7 @@ module.exports ={
 		path: path.resolve(__dirname, 'app'),
 	},
 	mode:'development',
+	devtool: 'eval-source-map',
 	devServer:{
 		watchFiles: ["app/**/*.html"],
 		static : {

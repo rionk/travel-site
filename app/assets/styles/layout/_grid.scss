@@ -1,45 +1,17 @@
 .row {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	//display: flex;
+	//flex-wrap: wrap;
 
 	&--equal-height-at-medium {
-		@include medium-screens {
-			& > div {
-				display: flex;
-			}
-		}
+		//@include medium-screens {
+		//	& > div {
+		//		display: flex;
+		//	}
+		//}
 	}
 
 	&--margin-top {
 		margin-top: 128px
-	}
-
-	// gutter
-	&--gutters {
-		gap: $gutter-width;
-		//column-gap: $gutter-width;
-		//row-gap: $gutter-width;
-	}
-
-	&--gutters-horizontal-small {
-		column-gap: $gutter-width-small;
-	}
-
-	&--gutters-horizontal-large {
-		column-gap: $gutter-width;
-
-		@include medium-screens {
-			column-gap: $gutter-width-large;
-		}
-	}
-
-	&--gutters-vertical-large {
-		row-gap : $gutter-width;
-
-		@include medium-screens {
-			row-gap: $gutter-width-large;
-		}
 	}
 
 	// element
@@ -52,61 +24,115 @@
 	}
 
 	@include medium-screens {
+		display : grid;
+		grid-template-columns: repeat(12, 1fr);
+
+		// gutter
+		&--gutters {
+			//gap: $gutter-width;
+			column-gap: $gutter-width;
+			row-gap: $gutter-width;
+		}
+
+		&--gutters-horizontal-small {
+			column-gap: $gutter-width-small;
+		}
+
+		&--gutters-horizontal-large {
+			@include medium-screens {
+				column-gap: $gutter-width-large;
+			}
+		}
+
+		&--gutters-vertical-large {
+			@include medium-screens {
+				row-gap: $gutter-width-large;
+			}
+		}
+
+		&__lg-1,
+		&__lg-2,
+		&__lg-3,
+		&__lg-4,
+		&__lg-5,
+		&__lg-6,
+		&__lg-7,
+		&__lg-8,
+		&__lg-9,
+		&__lg-10,
+		&__lg-11,
+		&__lg-12 {
+			grid-column: span 12 ;
+		}
+
 		&__md-4 {
-			width: calc(100%  / 3)
+			//width: calc(100%  / 3)
+			grid-column: span 4;
 		}
 
 		&__md-6 {
-			width: calc(100%  / 2)
+			//width: calc(100%  / 2)
+			grid-column: span 2;
 		}
 
 		&__md-8 {
-			width: calc(100% / 3 * 2)
+			//width: calc(100% / 3 * 2)
+			grid-column: span 8;
 		}
 
 		// gutters
 		&--gutters &__md-4 {
-			width: calc((100% - $gutter-width * 2) / 3)
+			//width: calc((100% - $gutter-width * 2) / 3)
+			grid-column: span 4;
 		}
 
 		&--gutters &__md-6 {
-			width: calc((100% - $gutter-width * 1) / 2)
+			//width: calc((100% - $gutter-width * 1) / 2)
+			grid-column: span 6;
 		}
 
 		&--gutters &__md-8 {
-			width: calc((100% - $gutter-width * 2) / 3 * 2 + $gutter-width)
+			//width: calc((100% - $gutter-width * 2) / 3 * 2 + $gutter-width);
+			grid-column: span 8;
 		}
 
 		// gutter-small
 		&--gutters-horizontal-small &__md-4 {
-			width: calc((100% - $gutter-width-small * 2) / 3)
+			//width: calc((100% - $gutter-width-small * 2) / 3)
+			grid-column: span 4;
 		}
 
 		&--gutters-horizontal-small &__md-6 {
-			width: calc((100% - $gutter-width-small * 1) / 2)
+			//width: calc((100% - $gutter-width-small * 1) / 2)
+			grid-column: span 6;
 		}
 
 		// gutter-large
 		&--gutters-horizontal-small &__md-4 {
-			width: calc((100% - $gutter-width-large * 2) / 3)
+			//width: calc((100% - $gutter-width-large * 2) / 3)
+			grid-column: span 4;
 		}
 
 		&--gutters-horizontal-large &__md-6 {
-			width: calc((100% - $gutter-width-large * 1) / 2)
+			//width: calc((100% - $gutter-width-large * 1) / 2)
+			grid-column: span 6;
 		}
 	}
 
 	@include large-screens {
 		&--gutters &__lg-4 {
-			width: calc((100% - $gutter-width * 2) / 3)
+			//width: calc((100% - $gutter-width * 2) / 3)
+			grid-column: span 4;
 		}
 
 		&--gutters-horizontal-small &__lg-4 {
-			width: calc((100% - $gutter-width-small * 2) / 3)
+			//width: calc((100% - $gutter-width-small * 2) / 3)
+			grid-column: span 4;
 		}
 
 		&--gutters-horizontal-large &__lg-4 {
-			width: calc((100% - $gutter-width-large * 2) / 3)
+			//width: calc((100% - $gutter-width-large * 2) / 3)
+			grid-column: span 4;
 		}
 	}
 }
