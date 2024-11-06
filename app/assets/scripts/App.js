@@ -1,9 +1,11 @@
 import "../styles/main.scss";
 import MobileMenu from "./modules/mobileMenu";
+import StickyHeader from "./modules/stickyHeader";
 
-const mobileMenu = new MobileMenu();
+new MobileMenu();
+new StickyHeader();
 
-if(module.hot){
-	module.hot.accept();
-}
+// if (module.hot) {
+//     module.hot.accept();
+// }
 

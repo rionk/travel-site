@@ -1,73 +1,77 @@
 .page-section {
-	padding: 2.2rem 0 4.5rem;
 
-	@include medium-screens {
-		padding: 4.5rem 0;
-	}
+    &:not(.large-hero) {
+        padding: 2.2rem 0 4.5rem;
 
-	&--blue {
-		background-color: $color-blue;
-		color: #fff;
-	}
+        @include medium-screens {
+            padding: 4.5rem 0;
+        }
+    }
 
-	&--testimonials {
-		background-color: #e0e6ef;
 
-		@include medium-screens {
-			background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
-			//background: url("assets/images/testimonials-bg.jpg") top center no-repeat;
-			background-size: cover;
-		}
+    &--blue {
+        background-color: $color-blue;
+        color: #fff;
+    }
 
-	}
+    &--testimonials {
+        background-color: #e0e6ef;
 
-	&__title {
-		font-size: 1.9rem;
-		font-weight: 300;
+        @include medium-screens {
+            background: url('../../assets/images/testimonials-bg.jpg') top center no-repeat;
+            //background: url("assets/images/testimonials-bg.jpg") top center no-repeat;
+            background-size: cover;
+        }
+    }
 
-		@include small-screens {
-			font-size: 2.875rem;
-		}
+    &__title {
+        font-size: 1.9rem;
+        font-weight: 300;
 
-		strong {
-			font-weight: 400;
-		}
+        @include small-screens {
+            font-size: 2.875rem;
+        }
 
-		&--centered {
-			text-align: center;
-		}
+        strong {
+            font-weight: 400;
+        }
 
-		&--orange {
-			color: $color-orange
-		}
+        &--centered {
+            text-align: center;
+        }
 
-		&--small {
-			font-size: 1.2rem;
-			@include small-screens {
-				font-size: 1.875rem;
-			}
-		}
+        &--orange {
+            color: $color-orange
+        }
 
-		&--narrow {
-			max-width: 500px;
-			margin-left: auto;
-			margin-right: auto;
-		}
+        &--small {
+            font-size: 1.2rem;
 
-		&--light {
-			font-weight: 100;
-		}
+            @include small-screens {
+                font-size: 1.875rem;
+            }
+        }
 
-		&--no-margin-top {
-			margin-top: 0;
-		}
+        &--narrow {
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-		&--margin-bottom-sm {
-			margin-bottom: .5em;
-		}
+        &--light {
+            font-weight: 100;
+        }
 
-		&--margin-bottom-lg {
-			margin-bottom: 1.6em;
-		}
-	}
+        &--no-margin-top {
+            margin-top: 0;
+        }
+
+        &--margin-bottom-sm {
+            margin-bottom: .5em;
+        }
+
+        &--margin-bottom-lg {
+            margin-bottom: 1.6em;
+        }
+    }
 }
